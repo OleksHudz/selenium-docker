@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 
     agent any
 
@@ -24,7 +24,6 @@ pipeline{
                 sh 'docker push olekshuds/selenium:latest'
                 sh "docker tag olekshuds/selenium:latest olekshuds/selenium:${env.BUILD_NUMBER}"
                 sh "docker push olekshuds/selenium:${env.BUILD_NUMBER}"
-
             }
         }
     }
