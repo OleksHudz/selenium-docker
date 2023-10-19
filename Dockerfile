@@ -8,7 +8,7 @@ WORKDIR /home/selenium-docker
 
 # add required files to run the test
 ADD target/docker-resources ./
-ADD runner.sh runner.sh
+ADD https://raw.githubusercontent.com/OleksHudz/selenium-docker/main/runner.sh runner.sh
 
 # Start the runner.sh
 ENTRYPOINT sh runner.sh
